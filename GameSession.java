@@ -16,10 +16,18 @@ public class GameSession {
         this.dateTime = dateTime;
     }
 
-    public int getKills() { return kills; }
-    public int getDeaths() { return deaths; }
-    public int getAssists() { return assists; }
-    public String getDateTime() { return dateTime; }
+    public int getKills() { 
+        return kills; 
+    }
+    public int getDeaths() { 
+        return deaths; 
+    }
+    public int getAssists() { 
+        return assists; 
+    }
+    public String getDateTime() { 
+        return dateTime; 
+    }
 
     @Override
     public String toString() {
