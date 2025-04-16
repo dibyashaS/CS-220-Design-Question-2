@@ -79,7 +79,7 @@ class KDATracker {
     private Map<String, GameRecord> gameRecords = new HashMap<>();
 
     public void addGameSession(String game, int kills, int deaths, int assists, String dateTime) {
-        gameRecords.putIfAbsent(game, new GameRecord(game));
+        gameRecords.putIfAbsent(game, new GameRecord(game));//[To add entries into a map: https://www.w3schools.com/java/ref_hashmap_putifabsent.asp]
         gameRecords.get(game).addSession(new GameSession(kills, deaths, assists, dateTime));
     }
 
