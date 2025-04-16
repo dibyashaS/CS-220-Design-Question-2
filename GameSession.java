@@ -31,7 +31,7 @@ public class GameSession {
 
     @Override
     public String toString() {
-        return "Session on " + dateTime + " - Kills: " + kills + ", Deaths: " + deaths + ", Assists: " + assists;
+        return "Session date:" + dateTime + "-Kills:" + kills + "-Deaths: " + deaths + "-Assists: " + assists;
     }
 }
 
@@ -86,12 +86,13 @@ class KDATracker {
             return;
         }
 
-        System.out.println("📊 Sessions for " + game + ":");
+        System.out.println("Sessions for " + game + ":");
         for (GameSession session : record.getSessions()) {
-            System.out.println("  " + session);
+            System.out.println(session);  
         }
 
         double[] avg = record.getAverageKDA();
-        System.out.printf("📈 Average K/D/A: %.2f / %.2f / %.2f%n", avg[0], avg[1], avg[2]);
+        System.out.println("Average K/D/A: " + avg[0] + "/" + avg[1] + "/" + avg[2]);
     }
 }
+
