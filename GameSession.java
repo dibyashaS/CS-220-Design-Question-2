@@ -60,7 +60,9 @@ class GameRecord {
             totalAssists += s.getAssists();
         }
         int count = sessions.size();
-        if (count == 0) return new double[] {0.0, 0.0, 0.0};//An array with 0.0 K,D and A
+        if (count == 0) 
+        return new double[] {0.0, 0.0, 0.0};//An array with 0.0 K,D and A
+
         return new double[] {
             (double) totalKills / count,
             (double) totalDeaths / count,
@@ -68,7 +70,9 @@ class GameRecord {
         };
     }
 
-    public String getGameName() { return gameName; }
+    public String getGameName() { 
+        return gameName; 
+    }
 }
 
 class KDATracker {
