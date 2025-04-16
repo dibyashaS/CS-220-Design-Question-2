@@ -31,10 +31,7 @@ public class GameSession {
 
     @Override
     public String toString() {
-        return "Session on " + dateTime +
-                " - Kills: " + kills +
-                ", Deaths: " + deaths +
-                ", Assists: " + assists;
+        return "Session on " + dateTime + " - Kills: " + kills + ", Deaths: " + deaths + ", Assists: " + assists;
     }
 }
 
