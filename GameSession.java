@@ -31,7 +31,7 @@ public class GameSession {
 
     @Override
     public String toString() {
-        return "Session date:" + dateTime + "-Kills:" + kills + "-Deaths: " + deaths + "-Assists: " + assists;
+        return "Session date:"+dateTime+"-Kills:"+kills+"-Deaths:"+deaths+"-Assists:"+assists;
     }
 }
 
@@ -60,7 +60,7 @@ class GameRecord {
             totalAssists += s.getAssists();
         }
         int count = sessions.size();
-        if (count == 0) return new double[] {0.0, 0.0, 0.0};
+        if (count == 0) return new double[] {0.0, 0.0, 0.0};//An array with 0.0 K,D and A
         return new double[] {
             (double) totalKills / count,
             (double) totalDeaths / count,
@@ -82,17 +82,17 @@ class KDATracker {
     public void printStats(String game) {
         GameRecord record = gameRecords.get(game);
         if (record == null) {
-            System.out.println("No records found for " + game);
+            System.out.println("No records found for"+game);
             return;
         }
 
-        System.out.println("Sessions for " + game + ":");
+        System.out.println("Sessions for"+game+":");
         for (GameSession session : record.getSessions()) {
             System.out.println(session);  
         }
 
         double[] avg = record.getAverageKDA();
-        System.out.println("Average K/D/A: " + avg[0] + "/" + avg[1] + "/" + avg[2]);
+        System.out.println("Average K/D/A:"+ avg[0] + "/" + avg[1] + "/" + avg[2]);
     }
 }
 
