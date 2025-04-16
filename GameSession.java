@@ -1,5 +1,8 @@
 import java.util.*;
-
+//Design problem 2B
+//Record KDA values,number of times character is killed in a game, number of deaths, number of assists
+//Update stats counter
+//Log multiple game sessions
 public class GameSession {
     private int kills;
     private int deaths;
